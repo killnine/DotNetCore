@@ -1,0 +1,14 @@
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\bin\Debug\netcoreapp2.0\xunit.runner.utility.netstandard15.dll
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netstandard15.dll
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\bin\Debug\netcoreapp2.0\Model.Test.deps.json
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\bin\Debug\netcoreapp2.0\Model.Test.runtimeconfig.json
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\bin\Debug\netcoreapp2.0\Model.Test.runtimeconfig.dev.json
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\bin\Debug\netcoreapp2.0\Model.Test.dll
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\bin\Debug\netcoreapp2.0\Model.Test.pdb
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\obj\Debug\netcoreapp2.0\Model.Test.csprojResolveAssemblyReference.cache
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\obj\Debug\netcoreapp2.0\Model.Test.csproj.CoreCompileInputs.cache
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\obj\Debug\netcoreapp2.0\Model.Test.AssemblyInfoInputs.cache
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\obj\Debug\netcoreapp2.0\Model.Test.AssemblyInfo.cs
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\obj\Debug\netcoreapp2.0\Model.Test.dll
+C:\WIP\Sandbox\DotNetCore\Model.Test\Model.Test\obj\Debug\netcoreapp2.0\Model.Test.pdb

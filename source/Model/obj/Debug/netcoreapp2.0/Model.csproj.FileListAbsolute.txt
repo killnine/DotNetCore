@@ -1,0 +1,9 @@
+C:\WIP\Sandbox\DotNetCore\source\Model\bin\Debug\netcoreapp2.0\Model.deps.json
+C:\WIP\Sandbox\DotNetCore\source\Model\bin\Debug\netcoreapp2.0\Model.dll
+C:\WIP\Sandbox\DotNetCore\source\Model\bin\Debug\netcoreapp2.0\Model.pdb
+C:\WIP\Sandbox\DotNetCore\source\Model\obj\Debug\netcoreapp2.0\Model.csprojResolveAssemblyReference.cache
+C:\WIP\Sandbox\DotNetCore\source\Model\obj\Debug\netcoreapp2.0\Model.csproj.CoreCompileInputs.cache
+C:\WIP\Sandbox\DotNetCore\source\Model\obj\Debug\netcoreapp2.0\Model.AssemblyInfoInputs.cache
+C:\WIP\Sandbox\DotNetCore\source\Model\obj\Debug\netcoreapp2.0\Model.AssemblyInfo.cs
+C:\WIP\Sandbox\DotNetCore\source\Model\obj\Debug\netcoreapp2.0\Model.dll
+C:\WIP\Sandbox\DotNetCore\source\Model\obj\Debug\netcoreapp2.0\Model.pdb

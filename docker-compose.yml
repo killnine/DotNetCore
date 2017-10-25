@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  weblibrary:
+    image: weblibrary
+    build:
+      context: ./source/WebLibrary
+      dockerfile: Dockerfile
