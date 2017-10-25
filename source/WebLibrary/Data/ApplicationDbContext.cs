@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using ASPNET_Core_1_0.Models;
+using WebLibrary.Models;
 
-namespace ASPNET_Core_1_0.Data
+namespace WebLibrary.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

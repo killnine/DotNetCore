@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using WebLibrary.Helpers
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -25,7 +26,7 @@
     @if (IsSectionDefined("Styles"))
             {@RenderSection("Styles", required: false)}
 
-    @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
+    <!-- Html.ApplicationInsightsJavaScript(TelemetryConfiguration) -->
 </head>
 <body class="fixed-sidebar no-skin-config full-height-layout">
 

@@ -5624,11 +5624,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\WIP\\Sandbox\\DotNetCore\\Model.Test\\Model.Test\\Model.Test.csproj",
+      "projectUniqueName": "C:\\WIP\\Sandbox\\DotNetCore\\source\\Model.Test\\Model.Test.csproj",
       "projectName": "Model.Test",
-      "projectPath": "C:\\WIP\\Sandbox\\DotNetCore\\Model.Test\\Model.Test\\Model.Test.csproj",
+      "projectPath": "C:\\WIP\\Sandbox\\DotNetCore\\source\\Model.Test\\Model.Test.csproj",
       "packagesPath": "C:\\Users\\dheiser\\.nuget\\packages\\",
-      "outputPath": "C:\\WIP\\Sandbox\\DotNetCore\\Model.Test\\Model.Test\\obj\\",
+      "outputPath": "C:\\WIP\\Sandbox\\DotNetCore\\source\\Model.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

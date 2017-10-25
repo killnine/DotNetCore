@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using ASPNET_Core_1_0.Models;
-using ASPNET_Core_1_0.Models.ManageViewModels;
-using ASPNET_Core_1_0.Services;
+using WebLibrary.Models;
+using WebLibrary.Models.ManageViewModels;
+using WebLibrary.Services;
 
-namespace ASPNET_Core_1_0.Controllers
+namespace WebLibrary.Controllers
 {
     [Authorize]
     public class ManageController : Controller
@@ -287,12 +285,14 @@ namespace ASPNET_Core_1_0.Controllers
                 return View("Error");
             }
             var userLogins = await _userManager.GetLoginsAsync(user);
-            var otherLogins = _signInManager.GetExternalAuthenticationSchemes().Where(auth => userLogins.All(ul => auth.AuthenticationScheme != ul.LoginProvider)).ToList();
+
+            //(DJH) TODO: Check that auth.AuthenticationScheme != ul.LoginProvider was replaced correctly
+            var otherLogins = _signInManager.GetExternalAuthenticationSchemesAsync().Result.Where(auth => userLogins.All(ul => auth.Name != ul.LoginProvider)).ToList();
             ViewData["ShowRemoveButton"] = user.PasswordHash != null || userLogins.Count > 1;
             return View(new ManageLoginsViewModel
             {
                 CurrentLogins = userLogins,
-                OtherLogins = otherLogins
+                //OtherLogins = otherLogins //(DJH) TODO: Not sure what to do here
             });
         }
 

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace ASPNET_Core_1_0.Models.AccountViewModels
+namespace WebLibrary.Models.AccountViewModels
 {
     public class ExternalLoginConfirmationViewModel
     {
