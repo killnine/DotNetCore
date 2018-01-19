@@ -303,3 +303,12 @@ __pycache__/
 
 # OpenCover UI analysis results
 OpenCover/
+/Backup
+obj
+bin
+/source/Model.Test/bin
+/source/Model.Test/obj
+/source/WebLibrary/obj
+/source/WebLibrary/bin
+/source/ActiveMq.Server/obj
+/source/ActiveMq.Server/bin

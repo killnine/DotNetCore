@@ -4,4 +4,17 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="DataAccess\Config\" />
+    <Folder Include="DataAccess\Mongo\" />
+    <Folder Include="DataAccess\ActiveMq\" />
+    <Folder Include="DataAccess\Oracle\" />
+    <Folder Include="Domain\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.4.4" />
+  </ItemGroup>
+
 </Project>
