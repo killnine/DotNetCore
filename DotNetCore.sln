@@ -3,20 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "source\Model\Model.csproj", "{D82D36A9-6577-4790-8E15-BDC2A74581AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "source\Model\Model.csproj", "{D82D36A9-6577-4790-8E15-BDC2A74581AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebLibrary", "source\WebLibrary\WebLibrary.csproj", "{F688CC69-D864-486F-A514-9DB193806CA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebLibrary", "source\WebLibrary\WebLibrary.csproj", "{F688CC69-D864-486F-A514-9DB193806CA2}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C118042F-DAFD-46AA-9A50-33EA88EF1EDC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model.Test", "source\Model.Test\Model.Test.csproj", "{25F2B24D-D31F-46E7-B866-6C1538103AF6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveMq.Server", "source\ActiveMq.Server\ActiveMq.Server.csproj", "{9344836F-9FB6-4B73-9950-C9C9F0B5CE4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model.Test", "source\Model.Test\Model.Test.csproj", "{25F2B24D-D31F-46E7-B866-6C1538103AF6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EE97925B-6C8A-4EC7-ADD4-CA174E7ED9BA}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Device.Client", "Device.Client\Device.Client.csproj", "{7199C7A6-9408-489E-ABF2-EAEDA5BFDE71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Device.Server", "Device.Server\Device.Server.csproj", "{88B59F5A-D062-403C-9068-C816975C3EED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{131D89D1-36A9-4BCF-807E-23B265976867}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Device.Client.Tests", "Device.Client.Tests\Device.Client.Tests.csproj", "{29A103B7-1B0B-4D61-A0FA-D590545CC6A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,15 +46,26 @@ Global
 		{25F2B24D-D31F-46E7-B866-6C1538103AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25F2B24D-D31F-46E7-B866-6C1538103AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25F2B24D-D31F-46E7-B866-6C1538103AF6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9344836F-9FB6-4B73-9950-C9C9F0B5CE4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9344836F-9FB6-4B73-9950-C9C9F0B5CE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9344836F-9FB6-4B73-9950-C9C9F0B5CE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9344836F-9FB6-4B73-9950-C9C9F0B5CE4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7199C7A6-9408-489E-ABF2-EAEDA5BFDE71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7199C7A6-9408-489E-ABF2-EAEDA5BFDE71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7199C7A6-9408-489E-ABF2-EAEDA5BFDE71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7199C7A6-9408-489E-ABF2-EAEDA5BFDE71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B59F5A-D062-403C-9068-C816975C3EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B59F5A-D062-403C-9068-C816975C3EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B59F5A-D062-403C-9068-C816975C3EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B59F5A-D062-403C-9068-C816975C3EED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29A103B7-1B0B-4D61-A0FA-D590545CC6A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A103B7-1B0B-4D61-A0FA-D590545CC6A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A103B7-1B0B-4D61-A0FA-D590545CC6A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A103B7-1B0B-4D61-A0FA-D590545CC6A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {711ED6B8-B4F8-4D61-868F-1002A63824F9}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29A103B7-1B0B-4D61-A0FA-D590545CC6A4} = {131D89D1-36A9-4BCF-807E-23B265976867}
 	EndGlobalSection
 EndGlobal

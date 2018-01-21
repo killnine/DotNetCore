@@ -6,15 +6,13 @@
 
   <ItemGroup>
     <Folder Include="DataAccess\Config\" />
-    <Folder Include="DataAccess\Mongo\" />
     <Folder Include="DataAccess\ActiveMq\" />
-    <Folder Include="DataAccess\Oracle\" />
     <Folder Include="Domain\" />
     <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MongoDB.Driver" Version="2.4.4" />
+    <Folder Include="DataTransfer\" />
+    <Folder Include="Domain\Types\" />
+    <Folder Include="DataTransfer\External\" />
+    <Folder Include="DataTransfer\External\DeviceData\" />
   </ItemGroup>
 
 </Project>
