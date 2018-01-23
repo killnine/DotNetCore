@@ -25,13 +25,14 @@ namespace Device.Server
             //Set up dependency injection
             var serviceProvider = new ServiceCollection()
                 .AddLogging()
-                .AddSingleton<INotificationConsumerService>(provider => new NotificationConsumerService(Configuration["RabbitMQHost"], provider.GetService<ILogger<NotificationConsumerService>>()))
+                .AddSingleton<INotificationConsumerService>(provider => new NotificationConsumerService(Configuration["RabbitMQHost"], Configuration["DeviceType"], provider.GetService<ILogger<NotificationConsumerService>>()))
                 .BuildServiceProvider();
 
             //Set up logging
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
                 .WriteTo.ColoredConsole()
+                .MinimumLevel.Debug()
                 .CreateLogger();
 
             var loggerFactory = serviceProvider.GetService<ILoggerFactory>();

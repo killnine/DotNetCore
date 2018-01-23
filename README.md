@@ -61,5 +61,7 @@ The application will simulate the flow of machine data up through an enterprise 
 
 * Device.<DeviceType>: This ensures that any consumer of a given <DeviceType> can parse that message, in theory
 
+## References ##
 
-
+* https://ubidots.com/blog/designing-for-the-internet-of-things/
+* http://iot-datamodels.blogspot.com/2013/05/event-models-for-restful-apis.html

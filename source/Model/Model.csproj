@@ -5,14 +5,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DataAccess\Config\" />
-    <Folder Include="DataAccess\ActiveMq\" />
     <Folder Include="Domain\" />
     <Folder Include="Services\" />
     <Folder Include="DataTransfer\" />
     <Folder Include="Domain\Types\" />
     <Folder Include="DataTransfer\External\" />
     <Folder Include="DataTransfer\External\DeviceData\" />
+    <Folder Include="DataAccess\Interfaces\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.0.0" />
+  </ItemGroup>
 </Project>
