@@ -1,5 +1,6 @@
 ﻿using System;
-namespace Model.DataTransfer.Device
+
+namespace Model.DataTransfer.External.DeviceData
 {
     public class DeviceDataBaseDto
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-using Model.DataTransfer.Device;
+using Model.DataTransfer.External.DeviceData;
 using Model.Domain.Types;
 
 namespace Device.Client.Domain.Events

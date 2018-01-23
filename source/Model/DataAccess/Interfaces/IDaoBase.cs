@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Logging;
 
-namespace Model.DataAccess
+namespace Model.DataAccess.Interfaces
 {
     public interface IDaoBase
     {

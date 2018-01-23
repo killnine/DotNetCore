@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using Microsoft.Extensions.Logging;
+using Model.DataAccess.Interfaces;
 
 namespace Model.DataAccess
 {
@@ -11,9 +12,10 @@ namespace Model.DataAccess
         private readonly IDbConnection _connection;
         private static IDbTransaction _transaction;
 
-        public DaoBase(IDbConnection connection)
+        public DaoBase(IDbConnection connection, ILogger<IDaoBase> logger)
         {
             _connection = connection;
+            _logger = logger;
         }
 
         public void EnsureTransaction()
@@ -29,11 +31,12 @@ namespace Model.DataAccess
             if (_transaction != null) { method(); }
 
             var result = default(TResult);
+
             _transaction = _connection.BeginTransaction();
             try
             {
                 result = method();
-
+                
                 if (rollback)
                 {
                     _transaction.Rollback();
@@ -65,14 +68,15 @@ namespace Model.DataAccess
             try
             {
                 method();
-
+                
                 if (rollback)
                 {
                     _transaction.Rollback();
-                    return;
                 }
-
-                _transaction.Commit();
+                else
+                {
+                    _transaction.Commit();
+                }
             }
             catch (Exception ex)
             {

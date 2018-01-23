@@ -1,13 +1,15 @@
 ﻿using System;
 using System.IO;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Configuration;
 using Device.Client.Domain.Devices;
+using Device.Client.Domain.Devices.Interfaces;
 using Device.Client.Services;
 using Device.Client.Services.Interfaces;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Serilog;
-namespace Device.Server
+
+namespace Device.Client
 {
     class Program
     {
@@ -33,7 +35,7 @@ namespace Device.Server
             //Set up logging
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
-                .WriteTo.ColoredConsole()
+                .WriteTo.Console()
                 .CreateLogger();
 
             var loggerFactory = serviceProvider.GetService<ILoggerFactory>();

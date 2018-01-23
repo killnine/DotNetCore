@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using Device.Client.Domain.Device;
+using Device.Client.Domain.Devices.Interfaces;
 using Device.Client.Domain.Events;
 using Microsoft.Extensions.Logging;
-using Model.DataTransfer.Device;
+using Model.DataTransfer.External.DeviceData;
 using Model.Domain.Types;
 
 namespace Device.Client.Domain.Devices

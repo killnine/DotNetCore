@@ -1,7 +1,7 @@
 ﻿using System;
 using Device.Client.Domain.Types;
 
-namespace Device.Client.Domain.DataHelper
+namespace Device.Client.Domain
 {
     public static class SignalGenerator
     {

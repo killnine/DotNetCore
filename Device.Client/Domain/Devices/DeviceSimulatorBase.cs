@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Timers;
 using Device.Client.Domain.Events;
-using Model.DataTransfer.Device;
 using Model.Domain.Types;
 
-namespace Device.Client.Domain.Device
+namespace Device.Client.Domain.Devices
 {
     public abstract class DeviceSimulatorBase
     {
