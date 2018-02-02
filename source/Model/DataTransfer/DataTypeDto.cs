@@ -1,10 +1,8 @@
 ﻿namespace Model.DataTransfer
 {
-    public class DataTypeDto
+    public class DataTypeDto : EntityBaseDto
     {
-        public DataTypeDto()
-        {
-
-        }
+        public string Name { get; set; }
+        public string ClrType { get; set; }
     }
 }

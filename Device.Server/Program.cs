@@ -31,7 +31,7 @@ namespace Device.Server
             //Set up logging
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
-                .WriteTo.ColoredConsole()
+                .WriteTo.Console()
                 .MinimumLevel.Debug()
                 .CreateLogger();
 

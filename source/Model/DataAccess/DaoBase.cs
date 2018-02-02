@@ -8,11 +8,11 @@ namespace Model.DataAccess
 
     public class DaoBase : IDaoBase
     {
-        private readonly ILogger<IDaoBase> _logger;
-        private readonly IDbConnection _connection;
+        private readonly ILogger _logger;
+        protected readonly IDbConnection _connection;
         private static IDbTransaction _transaction;
 
-        public DaoBase(IDbConnection connection, ILogger<IDaoBase> logger)
+        public DaoBase(IDbConnection connection, ILogger logger)
         {
             _connection = connection;
             _logger = logger;
@@ -31,6 +31,12 @@ namespace Model.DataAccess
             if (_transaction != null) { method(); }
 
             var result = default(TResult);
+
+            if (_connection.State != ConnectionState.Open)
+            {
+                _connection.Open();
+
+            }
 
             _transaction = _connection.BeginTransaction();
             try
@@ -63,6 +69,12 @@ namespace Model.DataAccess
         public void WithTransaction(Action method, ILogger logger = null, bool rollback = false)
         {
             if (_transaction != null) { method(); }
+
+            if (_connection.State != ConnectionState.Open)
+            {
+                _connection.Open();
+
+            }
 
             _transaction = _connection.BeginTransaction();
             try
