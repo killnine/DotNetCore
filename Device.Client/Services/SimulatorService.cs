@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Device.Client.Domain.Devices;
-using Device.Client.Domain.Devices.Interfaces;
+﻿using Device.Client.Domain.Devices.Interfaces;
 using Device.Client.Domain.Events;
 using Device.Client.Services.Interfaces;
 using Microsoft.Extensions.Logging;

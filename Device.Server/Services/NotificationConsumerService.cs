@@ -22,29 +22,36 @@ namespace Device.Server.Services
             _queue = queue;
             _hostname = hostname;
 
-            var factory = new ConnectionFactory() { HostName = _hostname };
-            using (var connection = factory.CreateConnection())
-            using (var channel = connection.CreateModel())
+            //TODO: Need to create a mechanism by which we can retry creating a connection if we fail to start up our consumer
+            try
             {
-                channel.QueueDeclare(queue: _queue,
-                                     durable: false,
-                                     exclusive: false,
-                                     autoDelete: false,
-                                     arguments: null);
-
-                var consumer = new EventingBasicConsumer(channel);
-                consumer.Received += (model, ea) =>
+                var factory = new ConnectionFactory() {HostName = _hostname};
+                using (var connection = factory.CreateConnection())
+                using (var channel = connection.CreateModel())
                 {
-                    var body = ea.Body;
-                    var message = Encoding.UTF8.GetString(body);
-                    _logger.LogInformation($"Received message! {DateTime.UtcNow} {message}");
-                };
-                channel.BasicConsume(queue: "Manroland",
-                                     autoAck: true,
-                                     consumer: consumer);
-                _logger.LogInformation($"Consumer started... (Press any key to exit)");
-                Console.WriteLine("Consumer started...");
-                Console.ReadLine();
+                    channel.QueueDeclare(queue: _queue,
+                        durable: false,
+                        exclusive: false,
+                        autoDelete: false,
+                        arguments: null);
+
+                    var consumer = new EventingBasicConsumer(channel);
+                    consumer.Received += (model, ea) =>
+                    {
+                        var body = ea.Body;
+                        var message = Encoding.UTF8.GetString(body);
+                        _logger.LogInformation($"Received message! {DateTime.UtcNow} {message}");
+                    };
+                    channel.BasicConsume(queue: "Manroland",
+                        autoAck: true,
+                        consumer: consumer);
+                    _logger.LogInformation($"Consumer started... (Press any key to exit)");
+                    Console.ReadLine();
+                }
+            }
+            catch (Exception ex)
+            {
+
             }
         }
     }

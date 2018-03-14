@@ -10,7 +10,7 @@ namespace Model.DataAccess
     {
         private readonly ILogger _logger;
         protected readonly IDbConnection _connection;
-        private static IDbTransaction _transaction;
+        protected static IDbTransaction _transaction;
 
         public DaoBase(IDbConnection connection, ILogger logger)
         {

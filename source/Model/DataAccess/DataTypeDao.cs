@@ -29,29 +29,29 @@ namespace Model.DataAccess
         {
             Guid newId = Guid.NewGuid();
 
-            _connection.Query<int>(DataTypeDaoSql.Insert, new { Name = dto.Name, ClrType = dto.ClrType, Id = newId });
+            _connection.Query<int>(DataTypeDaoSql.Insert, new { Name = dto.Name, ClrType = dto.ClrType, Id = newId }, _transaction);
 
             return newId;
         }
 
         public void Update(DataTypeDto dto)
         {
-            _connection.Query<int>(DataTypeDaoSql.Update, new { Name = dto.Name, ClrType = dto.ClrType });
+            _connection.Query<int>(DataTypeDaoSql.Update, new { Name = dto.Name, ClrType = dto.ClrType }, _transaction);
         }
 
         public void Delete(DataTypeDto dto)
         {
-            _connection.Query<int>(DataTypeDaoSql.Delete, new { Id = dto.Id});
+            _connection.Query<int>(DataTypeDaoSql.Delete, new { Id = dto.Id}, _transaction);
         }
 
         public DataTypeDto Get(Guid id)
         {
-            return _connection.Query<DataTypeDto>(DataTypeDaoSql.Get, new {Id = id}).Single();
+            return _connection.Query<DataTypeDto>(DataTypeDaoSql.Get, new {Id = id}, _transaction).Single();
         }
 
         public IList<DataTypeDto> GetAll()
         {
-            return _connection.Query<DataTypeDto>(DataTypeDaoSql.GetAll, null).ToList();
+            return _connection.Query<DataTypeDto>(DataTypeDaoSql.GetAll, _transaction).ToList();
         }
     }
 }
