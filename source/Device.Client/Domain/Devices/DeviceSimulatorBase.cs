@@ -7,8 +7,8 @@ namespace Device.Client.Domain.Devices
 {
     public abstract class DeviceSimulatorBase
     {
-        private readonly Timer _updateTimer = new Timer();
-        private readonly Timer _publishTimer = new Timer();
+        private Timer _updateTimer = new Timer();
+        private Timer _publishTimer = new Timer();
         protected DateTime _created = DateTime.UtcNow;
 
         public Guid Id { get; set; }

@@ -18,9 +18,7 @@ namespace Device.Server
             //Set up configuration
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .AddCommandLine(args)
-                .AddEnvironmentVariables();
+                .AddJsonFile("appsettings.json");
 
             Configuration = builder.Build();
 
@@ -32,12 +30,13 @@ namespace Device.Server
 
             //Set up logging
             Log.Logger = new LoggerConfiguration()
-                .ReadFrom.Configuration(Configuration)
+                .Enrich.FromLogContext()
+                .WriteTo.Console()
+                .MinimumLevel.Debug()
                 .CreateLogger();
 
             var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
             loggerFactory.AddSerilog(dispose: true);
-
 
             //Start up service instance
             var service = serviceProvider.GetService<INotificationConsumerService>();

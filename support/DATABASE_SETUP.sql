@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[DataType]
+﻿CREATE TABLE [dbo].[Table]
 (
 	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
     [Name] NVARCHAR(50) NOT NULL, 

@@ -18,13 +18,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Device.Client", "Device.Client\Device.Client.csproj", "{7199C7A6-9408-489E-ABF2-EAEDA5BFDE71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Device.Client", "source\Device.Client\Device.Client.csproj", "{7199C7A6-9408-489E-ABF2-EAEDA5BFDE71}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Device.Server", "Device.Server\Device.Server.csproj", "{88B59F5A-D062-403C-9068-C816975C3EED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Device.Server", "source\Device.Server\Device.Server.csproj", "{88B59F5A-D062-403C-9068-C816975C3EED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{131D89D1-36A9-4BCF-807E-23B265976867}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Device.Client.Tests", "Device.Client.Tests\Device.Client.Tests.csproj", "{29A103B7-1B0B-4D61-A0FA-D590545CC6A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Device.Client.Tests", "source\Device.Client.Tests\Device.Client.Tests.csproj", "{29A103B7-1B0B-4D61-A0FA-D590545CC6A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
