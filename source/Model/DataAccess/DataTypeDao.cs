@@ -29,11 +29,7 @@ namespace Model.DataAccess
         {
             dto.Id = Guid.NewGuid();
 
-<<<<<<< Updated upstream
-            _connection.Query<int>(DataTypeDaoSql.Insert, new { Name = dto.Name, ClrType = dto.ClrType, Id = newId }, _transaction);
-=======
-            _connection.Query<int>(DataTypeDaoSql.Insert, dto);
->>>>>>> Stashed changes
+            _connection.Query<int>(DataTypeDaoSql.Insert, new { Name = dto.Name, ClrType = dto.ClrType, Id = dto.Id }, _transaction);
 
             return dto.Id;
         }
