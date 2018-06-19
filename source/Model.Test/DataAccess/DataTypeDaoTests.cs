@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-﻿using System.Data.SqlClient;
+using System.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using Model.DataAccess;
 using Model.DataTransfer;
