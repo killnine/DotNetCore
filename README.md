@@ -10,8 +10,8 @@ The goal is to find any issues with implementing the technologies without being 
 ### Data Access ###
 * Oracle Database Integration (Abandoned, Unsupported 1/20/18)
 * Mongo Database Integration  (On Hold)
-* SQL Server Database Integration (On Hold)
-* PostgreSQL (Active)
+* SQL Server Database Integration (Active, 4/22/2018)
+* PostgreSQL (On Hold)
 
 ### Messaging ###
 * ActiveMQ Integration (Abandoned, Unsupported 1/20/18)
@@ -33,6 +33,7 @@ The goal is to find any issues with implementing the technologies without being 
 
 * Apache.NMS.ActiveMQ is dependent on .NET 4.6.1
 * Oracle has released a statement about supporting .NET Core by [end of year 2017](http://www.oracle.com/technetwork/topics/dotnet/tech-info/odpnet-dotnet-core-sod-3628981.pdf)
+* Oracle does not have a containerized version of their management system, therefore this makes creating a demo version using the DBMS more challenging. This project will omit Oracle integration until another DBMS implementation is stable.
 * Mongo has a driver that [supports .NET core](https://mongodb.github.io/mongo-csharp-driver/)
 
 ## Docker ##
