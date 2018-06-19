@@ -315,3 +315,7 @@ bin
 /source/WebLibrary/bin
 /source/ActiveMq.Server/obj
 /source/ActiveMq.Server/bin
+.DS_Store
+docs/.DS_Store
+source/.DS_Store
+support/.DS_Store
